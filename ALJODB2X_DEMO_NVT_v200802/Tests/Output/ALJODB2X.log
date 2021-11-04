@@ -1,0 +1,48 @@
+15:02:48.737 INFO      TOPAZ            ***************************************
+15:02:48.738 INFO      TOPAZ            ** Execution from Topaz with options **
+15:02:48.738 INFO      TOPAZ            ***************************************
+15:02:48.738 INFO      TOPAZ            Using repository: true
+15:02:48.738 INFO      TOPAZ            Repository URL: http://192.168.101.100:48226/totaltestapi/
+15:02:48.738 INFO      TOPAZ            ***************************************
+15:02:48.739 INFO      Engine           Test Scenario execution started
+15:02:48.739 INFO      Engine           Using context settings:
+  Engine Version                : 20.8.2.v20211026-0506_133
+  Environment id                : CWCC Batch DB2
+  Environment type              : Batch
+  Operating system              : ZOS
+  zOS agent version             : NEWEST
+  Server address                : cwcc.compuware.com
+  Server port                   : 16196
+  Job execution timeout seconds : 600
+  Job info interval seconds     : 3
+  Socket read timeout           : 30
+  Encoding                      : ISO8859-1
+  Codepage                      : IBM-1047
+  Host user Id                  : HUK0320
+  Use Repository Server         : true
+15:02:48.739 INFO      Engine           Setting variables from context and context data extensions
+15:02:48.739 INFO      Engine             id: environmentId      value: CWCC Batch DB2
+15:02:48.739 INFO      Engine             id: environmentType    value: BATCH
+15:02:48.740 INFO      Engine             id: userId             value: HUK0320
+15:02:48.740 INFO      Engine             id: accountingInfo     value: 
+15:02:48.741 INFO      Component        Interpreting Component: ALJODB2X program:ALJODB2X
+15:02:48.744 INFO      Component        Using setup JCL for execution
+15:02:48.744 INFO      Component          JCL for setup:
+//RPTFILE DD SYSOUT=*
+//EMPFILE DD DISP=SHR,DSN=HUK0320.DEMO.JCL(TTTDATD)
+15:02:48.746 INFO      CWCC Batch DB2   Sending Module execution request to Host for module:ALJODB2X rollback:false
+15:02:48.935 INFO      HCIClient        Creating job directory /u/xatester/huk0320/55730e6268ef4203a5fedbefd99d5d3f
+15:02:50.573 INFO      HCIClient        Job has been started at host with JobId:J0203830
+15:02:56.317 INFO      CWCC Batch DB2   Job execution completed with status:
+  Job status     : COMPLETED
+  Job status msg : Job HUK0320E(J0203830) ended with return code: 0000
+  Job name       : HUK0320E
+  Job id         : J0203830
+  Return code    : 0000
+  Abend code     : 
+  Abend reason   : 
+15:02:56.686 INFO      CWCC Batch DB2   Component completed with program exit: +0
+15:02:57.062 INFO      Component        Verifying program exit code: 0 against verify expression: value < 8
+15:02:57.073 INFO      Component        Program exit code was verified to be accepted by the expression: value < 8
+15:02:57.074 INFO      Component        Finished interpreting Component: ALJODB2X program:ALJODB2X
+15:02:57.074 INFO      Engine           Test Scenario execution ended

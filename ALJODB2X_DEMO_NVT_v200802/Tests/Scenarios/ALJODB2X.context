@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExecutionContext xmlns="http://www.xact.dk/xatester/v/1" environment="CWCC Batch DB2" logLevel="INFO" remote="false" useSimulations="true" uploadResult="false" timeout="600" readTimeout="30" debuggerType="NONE" jobInfoInterval="3">
+  <ExtensionData />
+  <ExtensionData componentName="aljodb2x" componentId="608a7b58e586c90bd459d639">
+    <Parameter key="sourcelibrary">
+      <Value>HUK0320.DEMO.LOAD.PDSE</Value>
+    </Parameter>
+    <Parameter key="loadlibraries">
+      <Value>CEE.SCEERUN</Value>
+      <Value>HUK0320.DEMO.LOAD.PDSE</Value>
+      <Value>DSNB10.SDSNLOAD</Value>
+      <Value>CEE.SCEERUN</Value>
+      <Value>SYS2.CW.CXR17B.SLCXLOAD</Value>
+      <Value>HUK0320.DEMO.LOAD.PDSE</Value>
+    </Parameter>
+    <Parameter key="loadlibrary">
+      <Value>CEE.SCEERUN</Value>
+    </Parameter>
+    <Parameter key="sourcelibraries">
+      <Value>HUK0320.DEMO.SSD</Value>
+    </Parameter>
+  </ExtensionData>
+  <XaUnit path="ALJODB2X.scenario" />
+</ExecutionContext>

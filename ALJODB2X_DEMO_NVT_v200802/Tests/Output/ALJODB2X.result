@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XaUnitResult resultType="SUCCESS" containsSimulation="false">
+  <ExecutionId>f2914415-bed2-4236-ae31-784ab1f7635c</ExecutionId>
+  <Message />
+  <AST>
+    <XaUnit xmlns="http://www.xact.dk/xatester/v/1" xmlns:data="http://www.xact.dk/xatester/data/v/1" caseInsensitiveCompare="false">
+      <Test>
+        <Component label="ALJODB2X" moduleName="ALJODB2X" programExitVerify="value &lt; 8" programExit="0" rollback="false">
+          <Data>
+            <PARMINFO>
+              <PARM_LTH expected="5">5</PARM_LTH>
+              <PARM_DATA expected="00003">00003</PARM_DATA>
+              <GRAND_TOTAL expected="5460">5460</GRAND_TOTAL>
+              <TOTAL_RECORD expected="F0F0F8" hexed="true">F0F0F8</TOTAL_RECORD>
+            </PARMINFO>
+          </Data>
+          <Setup>
+            <Content><![CDATA[//RPTFILE DD SYSOUT=*
+//EMPFILE DD DISP=SHR,DSN=HUK0320.DEMO.JCL(TTTDATD)]]></Content>
+          </Setup>
+        </Component>
+      </Test>
+      <MetaData>
+        <Component name="ALJODB2X" type="COBOL">
+          <INOUT>
+            <PARMINFO>
+              <PARM_LTH type="NumericBinary" length="4" bytes="2" native="S9(4)" signed="true" decimals="0" signsep="false" signpos="" />
+              <PARM_DATA type="Character" length="5" bytes="5" native="X(5)" />
+              <GRAND_TOTAL type="NumericBinary" length="7" bytes="4" native="S9(7)" signed="true" decimals="0" signsep="false" signpos="" />
+              <TOTAL_RECORD type="NumericDisplay" length="3" bytes="3" native="999" signed="false" decimals="0" signsep="false" signpos="" />
+            </PARMINFO>
+          </INOUT>
+        </Component>
+      </MetaData>
+    </XaUnit>
+  </AST>
+  <Context>
+    <ExecutionContext xmlns="http://www.xact.dk/xatester/v/1" environment="CWCC Batch DB2" logLevel="INFO" remote="false" useSimulations="true" uploadResult="false" timeout="600" readTimeout="30" debuggerType="NONE" jobInfoInterval="3" userid="HUK0320">
+      <platformruntime db2id="DBCC" database="DBCCCWCC" driver="com.ibm.db2.jcc.DB2Driver" uri="jdbc:db2://cwcc.compuware.com:546/${database}" environmenttype="BATCH" callinterface="NONE" />
+      <ExtensionData />
+      <ExtensionData componentName="aljodb2x" componentId="608a7b58e586c90bd459d639">
+        <Parameter key="db2id">
+          <Value>DBCC</Value>
+        </Parameter>
+        <Parameter key="sourcelibrary">
+          <Value>HUK0320.DEMO.LOAD.PDSE</Value>
+        </Parameter>
+        <Parameter key="db2plan">
+          <Value>ALJODB2X</Value>
+        </Parameter>
+        <Parameter key="loadlibraries">
+          <Value>CEE.SCEERUN</Value>
+          <Value>HUK0320.DEMO.LOAD.PDSE</Value>
+          <Value>DSNB10.SDSNLOAD</Value>
+          <Value>CEE.SCEERUN</Value>
+          <Value>SYS2.CW.CXR17B.SLCXLOAD</Value>
+          <Value>HUK0320.DEMO.LOAD.PDSE</Value>
+          <Value>CEE.SCEERUN</Value>
+          <Value>DSNB10.SDSNLOAD</Value>
+          <Value>SYS2.CW.CXR17B.SLCXLOAD</Value>
+          <Value>HUK0320.DEMO.LOAD.PDSE</Value>
+        </Parameter>
+        <Parameter key="loadlibrary">
+          <Value>CEE.SCEERUN</Value>
+        </Parameter>
+        <Parameter key="sourcelibraries">
+          <Value>HUK0320.DEMO.SSD</Value>
+        </Parameter>
+        <Parameter key="callinterface">
+          <Value>NONE</Value>
+        </Parameter>
+      </ExtensionData>
+      <References componentName="aljodb2x">
+        <Reference>//EMPFILE  DD  DSN=HUK0320.DEMO.JCL(TTTDATD2),
+//         DISP=SHR
+//RPTFILE  DD  SYSOUT=*</Reference>
+      </References>
+      <XaUnit xmlns:data="http://www.xact.dk/xatester/data/v/1" componentNameUnderTest="ALJODB2X" caseInsensitiveCompare="false" path="ALJODB2X.scenario">
+        <Test>
+          <Component label="ALJODB2X" moduleName="ALJODB2X" programExitVerify="value &lt; 8" rollback="false">
+            <Data>
+              <PARMINFO>
+                <PARM_LTH expected="5">5</PARM_LTH>
+                <PARM_DATA expected="00003">00003</PARM_DATA>
+                <GRAND_TOTAL expected="5460">0</GRAND_TOTAL>
+                <TOTAL_RECORD expected="F0F0F8" hexed="true">000000</TOTAL_RECORD>
+              </PARMINFO>
+            </Data>
+            <Setup>
+              <Content><![CDATA[//RPTFILE DD SYSOUT=*
+//EMPFILE DD DISP=SHR,DSN=HUK0320.DEMO.JCL(TTTDATD)]]></Content>
+            </Setup>
+          </Component>
+        </Test>
+        <MetaData>
+          <Component name="ALJODB2X" type="COBOL">
+            <INOUT>
+              <PARMINFO>
+                <PARM_LTH type="NumericBinary" length="4" bytes="2" native="S9(4)" signed="true" decimals="0" signsep="false" signpos="" />
+                <PARM_DATA type="Character" length="5" bytes="5" native="X(5)" />
+                <GRAND_TOTAL type="NumericBinary" length="7" bytes="4" native="S9(7)" signed="true" decimals="0" signsep="false" signpos="" />
+                <TOTAL_RECORD type="NumericDisplay" length="3" bytes="3" native="999" signed="false" decimals="0" signsep="false" signpos="" />
+              </PARMINFO>
+            </INOUT>
+          </Component>
+        </MetaData>
+      </XaUnit>
+      <ExternalResources />
+    </ExecutionContext>
+  </Context>
+  <Started>20211104-15-02-48</Started>
+  <Ended>20211104-15-02-57</Ended>
+</XaUnitResult>
